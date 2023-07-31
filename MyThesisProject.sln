@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{0BB2D838-E50F-42FB-8B1E-64BA62884CB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{7DA2A2FC-00D4-4126-BB24-8E4DAFDED7FD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarBook.WebApi", "Api\CarBook.WebApi\CarBook.WebApi.csproj", "{50DFEB79-A95D-4E4D-9820-738B2064C34A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarBook.EntityLayer", "Api\CarBook.EntityLayer\CarBook.EntityLayer.csproj", "{1A0C6705-6E74-41FB-99C4-ADA36FE7AE74}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarBook.DataAccessLayer", "Api\CarBook.DataAccessLayer\CarBook.DataAccessLayer.csproj", "{1B23BE3E-A19B-4539-84AF-8F03AF49B7F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarBook.BusinessLayer", "Api\CarBook.BusinessLayer\CarBook.BusinessLayer.csproj", "{FC72BF44-F079-43CD-B306-C9E3BB1EA9B9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarBook.UI", "Frontend\CarBook.UI\CarBook.UI.csproj", "{10C5F230-3253-4E9E-A504-EB3F922D059B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50DFEB79-A95D-4E4D-9820-738B2064C34A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50DFEB79-A95D-4E4D-9820-738B2064C34A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50DFEB79-A95D-4E4D-9820-738B2064C34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50DFEB79-A95D-4E4D-9820-738B2064C34A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A0C6705-6E74-41FB-99C4-ADA36FE7AE74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A0C6705-6E74-41FB-99C4-ADA36FE7AE74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A0C6705-6E74-41FB-99C4-ADA36FE7AE74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A0C6705-6E74-41FB-99C4-ADA36FE7AE74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B23BE3E-A19B-4539-84AF-8F03AF49B7F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B23BE3E-A19B-4539-84AF-8F03AF49B7F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B23BE3E-A19B-4539-84AF-8F03AF49B7F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B23BE3E-A19B-4539-84AF-8F03AF49B7F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC72BF44-F079-43CD-B306-C9E3BB1EA9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC72BF44-F079-43CD-B306-C9E3BB1EA9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC72BF44-F079-43CD-B306-C9E3BB1EA9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC72BF44-F079-43CD-B306-C9E3BB1EA9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10C5F230-3253-4E9E-A504-EB3F922D059B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10C5F230-3253-4E9E-A504-EB3F922D059B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10C5F230-3253-4E9E-A504-EB3F922D059B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10C5F230-3253-4E9E-A504-EB3F922D059B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50DFEB79-A95D-4E4D-9820-738B2064C34A} = {0BB2D838-E50F-42FB-8B1E-64BA62884CB8}
+		{1A0C6705-6E74-41FB-99C4-ADA36FE7AE74} = {0BB2D838-E50F-42FB-8B1E-64BA62884CB8}
+		{1B23BE3E-A19B-4539-84AF-8F03AF49B7F1} = {0BB2D838-E50F-42FB-8B1E-64BA62884CB8}
+		{FC72BF44-F079-43CD-B306-C9E3BB1EA9B9} = {0BB2D838-E50F-42FB-8B1E-64BA62884CB8}
+		{10C5F230-3253-4E9E-A504-EB3F922D059B} = {7DA2A2FC-00D4-4126-BB24-8E4DAFDED7FD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {622B339E-E716-4288-98B4-69678C5492F4}
+	EndGlobalSection
+EndGlobal

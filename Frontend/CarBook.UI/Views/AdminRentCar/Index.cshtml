@@ -1,0 +1,85 @@
+﻿@model List<ResultRentCarViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+     int count = 0;
+}
+
+
+<div class="col-lg-12">
+    <div class="card">
+        <div class="card-body">
+            <div class="card-title">
+                <h4>Kiralanmak İstenen Araçlar</h4>
+            </div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Aracı Kiralayan</th>
+                            <th>Araç</th>
+                            <th>Telefon Numarası</th>
+                            <th>Araç Alış Tarihi</th>
+                            <th>Araç Teslim Tarihi</th>
+                            <th>Durum</th>
+                            <th>Onayla</th>
+                            <th>İptal Et</th>
+                            <th>Beklet</th>
+                            <th>Güncelle</th>
+                         
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+
+                            count++;
+                            <tr>
+                            <td>@count</td>
+                            <td>@item.Name</td>
+                            <td>@item.Car</td>
+                            <td>@item.PhoneNumber</td>
+
+                            <td>@(((DateTime)@item.PickUpDate).ToString("dd-MMM-yyyy"))</td>
+                           
+                            <td>@(((DateTime)@item.DropOffDate).ToString("dd-MMM-yyyy"))</td>
+                                @if(item.Status == "Müşteri Aranacak")
+                                {
+                                    <td><span class="badge badge-warning px-2">@item.Status</span></td>
+                                }
+                                @if(item.Status == "Onaylandı")
+                                {
+                                    <td><span class="badge badge-success px-2">@item.Status</span></td>
+                                }
+                                @if(item.Status == "İptal Edildi")
+                                {
+                                    <td><span class="badge badge-danger px-2">@item.Status</span></td>
+                                }
+                                @if(item.Status == "Onay Bekliyor")
+                                {
+                                    <td><span class="badge badge-dark px-2">@item.Status</span></td>
+                                }
+                               
+                                
+                               
+                                
+                            <td><a href="/AdminRentCar/ApprovedRentCar/@item.RentCarID" class="btn btn-outline-success">Onayla</a></td>
+                            <td><a href="/AdminRentCar/CancelRentCar/@item.RentCarID" class="btn btn-outline-danger">İptal Et</a></td>
+                            <td><a href="/AdminRentCar/WaitRentCar/@item.RentCarID" class="btn btn-outline-warning">Beklet</a></td>
+                            <td><a href="/AdminRentCar/UpdateRentCar/@item.RentCarID" class="btn btn-outline-info">Güncelle</a></td>
+                            
+
+                        </tr>
+
+                           }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

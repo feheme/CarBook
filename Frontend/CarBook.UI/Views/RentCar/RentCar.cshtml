@@ -1,0 +1,126 @@
+﻿@model CreateRentCarViewModel
+
+
+
+<section class="ftco-section ftco-no-pt">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-12	featured-top">
+                <div class="row no-gutters">
+                    <div class="col-md-12 d-flex align-items-center">
+                        <form method="post" asp-action="RentCar" asp-controller ="RentCar" class="request-form ftco-animate bg-primary d-flex flex-column" style="margin-left: 220px ; width:700px">
+                            <h2>Aracınızı Kiralayın</h2>
+
+
+                            @if (ViewBag.ErrorMessages != null)
+                            {
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach (var errorMessage in ViewBag.ErrorMessages)
+                                        {
+                                            <li>@errorMessage</li>
+                                        }
+                                    </ul>
+                                </div>
+                            }
+                            @if (TempData.ContainsKey("SuccessMessage"))
+                            {
+                                <div class="alert alert-success">
+                                    @TempData["SuccessMessage"]
+                                </div>
+                            }
+                          
+
+                            
+                             <div class="d-flex">
+                                <div class="form-group mr-2">
+                                    <label for="" class="label">İSİM</label>
+                                    <input type="text" class="form-control" placeholder="İsim" asp-for="Name">
+                                    <span class="text-danger" asp-validation-for="Name" ></span>
+
+                                </div>
+
+                                 <div class="form-group ml-2">
+                                    <label for="" class="label">Telefon Numarası</label>
+                                    <input type="text" class="form-control" placeholder="Telefon Numarası" asp-for="PhoneNumber">
+                                    <span class="text-danger" asp-validation-for="PhoneNumber" ></span>
+
+                                </div>
+                             </div>                              
+            
+
+                            <div class="d-flex">
+                                 <div class="form-group">
+                                    <label for="" class="label">MAİL ADRESİ</label>
+                                    <input type="email" class="form-control" placeholder="Mail Adresiniz" asp-for="Mail">
+                                    <span class="text-danger" asp-validation-for="Mail" ></span>
+
+                                </div>
+
+                                 <div class="form-group ml-2">
+                                 
+                                    @* <label for="" class="label">ARABA ŞEÇİNİZ</label>
+                                     @Html.DropDownListFor(x => x.Car, (List<SelectListItem>)ViewBag.v, new {@class = "custom-dropdown",@style = "background-color: white; color: black;"} )
+                                    <span class="text-danger" asp-validation-for="Car" ></span>*@
+                                        
+                                   <label for="" class="label">ARABA ŞEÇİNİZ</label>
+                                    <select asp-for="Car" class="custom-dropdown" style="background-color: white; color: black;">
+                                        @foreach (var item in ViewBag.v)
+                                        {
+                                            <option value="@item.Value">@item.Text</option>
+                                        }
+                                    </select>
+                                    <span class="text-danger" asp-validation-for="Car"></span>
+                                
+                                
+                                </div> 
+                            </div>   
+
+                       
+
+
+
+                             <div class="d-flex">
+                                <div class="form-group mr-2">
+                                    <label for="" class="label">Kalkış Lokasyonu</label>
+                                   
+                                    
+                                    <input type="text" class="form-control" placeholder="Şehir, Havalimanı, İstasyon, vb" asp-for="PickUpLocation">
+                                    <span class="text-danger" asp-validation-for="PickUpLocation" ></span>
+                                                                    
+                                </div>
+                                <div class="form-group ml-2">
+                                    <label for="" class="label">Varış Lokasyonu</label>
+                                    <input type="text" class="form-control" placeholder="Şehir, Havalimanı, İstasyon, vb" asp-for="DropOffLocation">
+                                    <span class="text-danger" asp-validation-for="DropOffLocation" ></span>
+                                  
+                                </div>
+                              </div>  
+
+
+
+                            <div class="d-flex">
+                                <div class="form-group mr-2">
+                                    <label for="" class="label">Alış TARİHİ</label>
+                                    <input type="date" class="form-control"  placeholder="Tarih" asp-for="PickUpDate">
+                                    <span class="text-danger" asp-validation-for="PickUpDate" ></span>
+                                </div>
+                                <div class="form-group ml-2">
+                                    <label for="" class="label">Varış TARİHİ</label>
+                                    <input type="date" class="form-control"  placeholder="Tarih" asp-for="DropOffDate">
+                                    <span class="text-danger" asp-validation-for="DropOffDate" ></span>
+
+                                </div>
+                            </div>
+                          
+                            <div class="form-group">
+                                <input type="submit" value="Şimdi Aracınızı Kiralayın" class="btn btn-dark py-3 px-4 text ">
+                            </div>
+                        </form>
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

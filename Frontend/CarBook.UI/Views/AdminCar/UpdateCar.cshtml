@@ -1,0 +1,36 @@
+﻿@model UpdateCarViewModel
+@{
+    ViewData["Title"] = "UpdateCar";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="CarID"/>
+    <label>Araba Resim Yolu</label>
+    <input type="text" asp-for="CoverImage" class="form-control"/>
+    <span asp-validation-for="CoverImage" class="text-danger"></span>
+    <br />
+
+    <label>Araba İsmi</label>
+    <input type="text" asp-for="Name" class="form-control"/>
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+
+    <label>Araba Markası</label>
+    <input type="text" asp-for="Brand" class="form-control"/>
+    <span asp-validation-for="Brand" class="text-danger"></span>
+    <br />
+
+    <label>Araba Fiyatı</label>
+    <input type="text" asp-for="Price" class="form-control"/>
+    <span asp-validation-for="Price" class="text-danger"></span>
+    <br />
+ 
+   
+    <button class="btn btn-warning">Araba Güncelle</button>
+
+
+
+
+</form>
+

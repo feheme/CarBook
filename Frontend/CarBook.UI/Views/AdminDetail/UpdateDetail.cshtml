@@ -1,0 +1,74 @@
+﻿@model UpdateDetailViewModel
+
+@{
+    ViewData["Title"] = "UpdateDetail";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+
+
+
+<form method="post">
+
+    <input type="hidden" asp-for="DetailID" />
+    <label>Araba İsmi</label>
+    <input type="text" asp-for="Name" class="form-control"/>
+    <span asp-validation-for="Name" class="text-danger"></span>
+    <br />
+
+     <label>Araba Resmi</label>
+    <input type="text" asp-for="Image" class="form-control"/>
+    <span asp-validation-for="Image" class="text-danger"></span>
+    <br />
+
+
+    <label>Günlük Ücret</label>
+    <input type="text" asp-for="DayPrice" class="form-control"/>
+    <span asp-validation-for="DayPrice" class="text-danger"></span>
+    <br />
+
+    <label>Aylık Ücret</label>
+    <input type="text" asp-for="MonthPrice" class="form-control"/>
+    <span asp-validation-for="MonthPrice" class="text-danger"></span>
+    <br />
+
+    <label>Kilometre</label>
+    <input type="text" asp-for="Mileage" class="form-control"/>
+    <span asp-validation-for="Mileage" class="text-danger"></span>
+    <br />
+
+    <label>Vites Türü</label>
+    <input type="text" asp-for="Transmission" class="form-control"/>
+    <span asp-validation-for="Transmission" class="text-danger"></span>
+    <br />
+
+    <label>Koltuk</label>
+    <input type="text" asp-for="Seats" class="form-control"/>
+    <span asp-validation-for="Seats" class="text-danger"></span>
+    <br />
+
+    <label>Yakıt Türü</label>
+    <input type="text" asp-for="Fuel" class="form-control"/>
+    <span asp-validation-for="Fuel" class="text-danger"></span>
+    <br />
+
+    <label>Miktar</label>
+    <input type="text" asp-for="Total" class="form-control"/>
+    <span asp-validation-for="Total" class="text-danger"></span>
+    <br />
+ 
+   
+    <button class="btn btn-warning">Araba Detayı Güncelle</button>
+
+
+
+
+</form>
+
+
+
+
+
+
+

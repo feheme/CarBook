@@ -1,0 +1,29 @@
+﻿@model List<ResultContactViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div class="card">
+        <div class="card-body">
+           
+                <div class="media-body">
+                    <div class="d-sm-flex justify-content-between mb-2">
+                        <h3 class="mb-sm-0">@item.Name <small class="text-muted ml-3">@item.Date</small> <small class="text-muted ml-3">@item.Mail</small></h3>
+
+                    </div>
+
+                    <h6 class="mb-sm-0">Konu : @item.Subject</h6>
+                    <br/>
+                    <p>@item.Message</p>
+
+
+
+                </div>
+            
+            
+        </div>
+    </div>
+}

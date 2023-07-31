@@ -1,0 +1,57 @@
+﻿@model List<ResultDetailViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>#</th>        
+        <th>Araba İsmi</th>
+        <th>Resim</th>       
+        <th>Günlük Ücret</th>
+        <th>Aylık Ücret</th>
+        <th>Kilometre</th>
+        <th>Vites Türü</th>
+        <th>Koltuk</th>
+        <th>Yakıt Tipi</th>
+        <th>Miktar</th>
+        <th>Sil </th>
+        <th>Güncelle</th>
+
+
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+
+             <td>@item.DetailID</td>
+             <td>@item.Name</td>
+             <td>@item.Image</td>            
+             <td>@item.DayPrice</td>
+             <td>@item.MonthPrice</td>
+             <td>@item.Mileage</td>
+             <td>@item.Transmission</td>
+             <td>@item.Seats</td>
+             <td>@item.Fuel</td>
+             <td>@item.Total</td>
+             <td><a href="/AdminDetail/DeleteDetail/@item.DetailID" class="btn btn-danger">Sil</a></td>
+             <td><a href="/AdminDetail/UpdateDetail/@item.DetailID" class="btn btn-success">Güncelle</a></td>
+         
+
+
+        </tr>
+    }
+
+
+</table>
+
+<a href="/AdminDetail/AddDetail/" class="btn btn-info">Yeni Araba Detay Girişi</a>
+
+
